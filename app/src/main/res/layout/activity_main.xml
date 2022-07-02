@@ -4,103 +4,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#00BCD4"
-    android:backgroundTint="#2196F3"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/tv_result"
-        android:layout_width="221dp"
-        android:layout_height="20dp"
-        android:layout_marginTop="128dp"
-        android:background="#00BCD4"
-        android:ems="10"
-        android:hint="@string/result"
-        android:textColor="@color/white"
-        android:textColorHint="@color/white"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_calculate" />
 
-    <EditText
-        android:id="@+id/et_person_name"
-        android:layout_width="107dp"
-        android:layout_height="23dp"
-        android:background="#00BCD4"
-        android:cursorVisible="false"
-        android:hint="@string/name"
-        android:inputType="textPersonName"
-        android:textColor="@color/white"
-        android:textColorHint="@color/white"
-        android:textStyle="bold"
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/container"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:defaultNavHost="true"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteY="81dp" />
+        app:navGraph="@navigation/main_graph" />
 
-    <EditText
-        android:id="@+id/et_person_age"
-        android:layout_width="wrap_content"
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_view"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:background="#00BCD4"
-        android:ems="10"
-        android:hint="@string/age"
-        android:inputType="numberPassword"
-        android:textColor="@color/white"
-        android:textColorHint="@color/white"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_person_weight" />
-
-    <EditText
-        android:id="@+id/et_person_height"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="104dp"
-        android:background="#00BCD4"
-        android:backgroundTint="#00BCD4"
-        android:ems="10"
-        android:hint="@string/height"
-        android:inputType="numberPassword"
-        android:textColor="@color/white"
-        android:textColorHint="@color/white"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_person_name" />
-
-    <EditText
-        android:id="@+id/et_person_weight"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:background="#00BCD4"
-        android:ems="10"
-        android:hint="@string/weight"
-        android:inputType="numberDecimal"
-        android:textColor="@color/white"
-        android:textColorHint="@color/white"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_person_height" />
-
-    <Button
-        android:id="@+id/btn_calculate"
-        android:layout_width="130dp"
-        android:layout_height="51dp"
-        android:layout_marginTop="148dp"
-        android:backgroundTint="#00BCD4"
-        android:hint="@string/calculate"
-        android:textColor="@color/white"
-        android:textColorHint="@color/white"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_person_age" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/menu_main" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
