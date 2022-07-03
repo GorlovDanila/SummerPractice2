@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">Finish</string>
+    <string name="app_name">ThirdProject</string>
+    <string name="name">Name:</string>
+    <string name="hobby">Hobby:</string>
+    <string name="info">Info:</string>
+    <string name="id">Id:</string>
+    <string name="users_and_hobbies">Users and Hobbies</string>
 </resources>

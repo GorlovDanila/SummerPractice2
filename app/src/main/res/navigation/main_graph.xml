@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/users_fragment">
+
+    <fragment
+        android:id="@+id/users_fragment"
+        android:name="com.example.finish.UsersFragment"
+        android:label="ProfileFragment"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout="@layout/fragment_users">
+
+        <action
+            android:id="@+id/action_users_fragment_to_info_fragment"
+            app:destination="@id/info_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/info_fragment"
+        android:name="com.example.finish.resource.InformationFragment"
+        android:label="InformationFragment"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout="@layout/fragment_info">
+        <argument
+            android:name="arg"
+            app:argType="integer" />
+    </fragment>
+</navigation>
