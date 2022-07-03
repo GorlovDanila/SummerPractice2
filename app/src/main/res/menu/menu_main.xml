@@ -26,6 +26,4 @@
         android:enabled="true"
         android:icon="@drawable/ic_round_settings_24"
         android:title="@string/menu_settings" />
-
-
 </menu>

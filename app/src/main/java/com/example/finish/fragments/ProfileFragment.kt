@@ -9,7 +9,6 @@ import androidx.navigation.fragment.findNavController
 import com.example.finish.R
 import com.example.finish.databinding.FragmentProfileBinding
 
-
 class ProfileFragment : Fragment(R.layout.fragment_profile) {
 
     private var _binding: FragmentProfileBinding? = null

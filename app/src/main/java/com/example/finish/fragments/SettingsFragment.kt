@@ -7,7 +7,6 @@ import androidx.navigation.fragment.findNavController
 import com.example.finish.R
 import com.example.finish.databinding.FragmentSettingsBinding
 
-
 class SettingsFragment : Fragment(R.layout.fragment_settings) {
     private var _binding: FragmentSettingsBinding? = null
     private val binding get() = _binding!!

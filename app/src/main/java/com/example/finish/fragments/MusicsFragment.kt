@@ -7,7 +7,6 @@ import androidx.navigation.fragment.findNavController
 import com.example.finish.R
 import com.example.finish.databinding.FragmentMusicsBinding
 
-
 class MusicsFragment : Fragment(R.layout.fragment_musics) {
     private var _binding: FragmentMusicsBinding? = null
     private val binding get() = _binding!!
